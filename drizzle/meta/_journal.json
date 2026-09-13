@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1788812007953,
+      "tag": "0000_rich_paladin",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1788813184333,
+      "tag": "0001_free_morph",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1788814458503,
+      "tag": "0002_polite_slyde",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1788814801485,
+      "tag": "0003_cynical_the_anarchist",
+      "breakpoints": true
+    }
+  ]
+}
