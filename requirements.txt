@@ -1,0 +1,5 @@
+# Jawwal & More is a Node.js/TypeScript project, not a Python project.
+# Python packages are not required to run the storefront.
+# Install the runtime with Termux: pkg install nodejs git
+# Then enable pnpm: corepack enable && corepack prepare pnpm@10.4.1 --activate
+# JavaScript dependencies are declared in package.json and pnpm-lock.yaml.
