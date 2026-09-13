@@ -1,0 +1,46 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "server",
+    "db",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://31xH5rQNoU75MUx.root:Pecp4p8q16aRi2Jth0CY@gateway05.us-east-1.prod.aws.tidbcloud.com:4000/n5mYxshrEHt6RHGinmFRRB?ssl={\"rejectUnauthorized\":true}",
+    "DRIZZLE_DATABASE_URL": "mysql://31xH5rQNoU75MUx.root:Pecp4p8q16aRi2Jth0CY@gateway05.us-east-1.prod.aws.tidbcloud.com:4000/n5mYxshrEHt6RHGinmFRRB?ssl={\"rejectUnauthorized\":true}",
+    "MANUS_WEBDEV_PROJECT_ID": "n5mYxshrEHt6RHGinmFRRB"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/n5mYxshrEHt6RHGinmFRRB.git",
+    "expiration": "2026-09-14T17:50:19.279Z",
+    "token": "art_v2_x_4f4a8512dcdb9dfa9c32512c3329371b0808fd92?expires=1789408219",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "jawwal-more-store",
+  "path": "/home/ubuntu/jawwal-more-store",
+  "port": 3000,
+  "secrets": {
+    "ADMIN_PASSWORD": "admin@12345",
+    "ADMIN_USERNAME": "admin",
+    "BUILT_IN_FORGE_API_KEY": "YDEZL8DD3KAbFpkBkyEMg4",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "RETMaee2mTMeT8Uvs9ghRE",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Ar2 Ar1",
+    "OWNER_OPEN_ID": "cWTiTAopaJwJcU6FTFwFzP",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "ef42e133-f117-486b-bc85-0c762dabaafa",
+    "VITE_APP_ID": "n5mYxshrEHt6RHGinmFRRB",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663959569926/fuGYPQTKSvkWQDXG.png",
+    "VITE_APP_TITLE": "جوال وأكثر | Jawwal \u0026 More",
+    "VITE_FRONTEND_FORGE_API_KEY": "Lqvi6qGoLjDPfWczXFP2pR",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-db-user",
+  "test_command": "pnpm test"
+}
