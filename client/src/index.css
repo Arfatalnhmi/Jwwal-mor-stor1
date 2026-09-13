@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: 35 20% 98%;
+  --foreground: 222 55% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 55% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 55% 14%;
+  --primary: 225 57% 18%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 39 100% 68%;
+  --secondary-foreground: 225 57% 18%;
+  --muted: 34 16% 94%;
+  --muted-foreground: 220 10% 48%;
+  --accent: 39 100% 68%;
+  --accent-foreground: 225 57% 18%;
+  --border: 34 17% 89%;
+  --input: 34 17% 89%;
+  --ring: 225 57% 18%;
+  --radius: 0.8rem;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fbfaf8;
+  color: #101a38;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:active { transform: scale(.98); }
+::selection { background: #ffd45a; color: #14214a; }
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; padding-inline: 2rem; } }
+@media (min-width: 1280px) { .container { max-width: 1180px; } }
+@media (min-width: 1536px) { .container { max-width: 1240px; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  main > section { animation: page-in .45s var(--ease-out) both; }
+  @keyframes page-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}
+
+.store-shell { transition: background-color .28s ease, color .28s ease; }
+.store-shell .theme-toggle { transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .16s ease; }
+
+/* The storefront uses a warm editorial palette with a few intentional hard-coded accents.
+   These scoped overrides keep those accents while converting surfaces, borders and text
+   into a calm navy dark mode without changing the existing light theme. */
+.dark-theme { background: #0b1225 !important; color: #f5f7ff !important; }
+.dark-theme [class*="bg-[#fbfaf8]"],
+.dark-theme [class*="bg-[#f2f0eb]"],
+.dark-theme [class*="bg-[#f4f2ee]"],
+.dark-theme [class*="bg-[#f1efeb]"] { background-color: #111a31 !important; }
+.dark-theme [class*="bg-white"] { background-color: #17213b !important; }
+.dark-theme [class*="text-[#101a38]"],
+.dark-theme [class*="text-[#14214a]"],
+.dark-theme [class*="text-[#39435d]"],
+.dark-theme [class*="text-[#535a6b]"],
+.dark-theme [class*="text-[#5f6471]"],
+.dark-theme [class*="text-[#677086]"] { color: #f2f5ff !important; }
+.dark-theme [class*="text-[#727787]"],
+.dark-theme [class*="text-[#777c89]"],
+.dark-theme [class*="text-[#7d818c]"],
+.dark-theme [class*="text-[#808593]"],
+.dark-theme [class*="text-[#858a96]"],
+.dark-theme [class*="text-[#949597]"] { color: #aeb7cc !important; }
+.dark-theme [class*="border-[#e8e5df]"],
+.dark-theme [class*="border-[#e4e2df]"],
+.dark-theme [class*="border-[#e4e1db]"],
+.dark-theme [class*="border-[#eeeae4]"],
+.dark-theme [class*="border-[#ddd9d1]"] { border-color: #2b3857 !important; }
+.dark-theme input { background-color: #111a31 !important; border-color: #2b3857 !important; color: #f2f5ff !important; }
+.dark-theme input::placeholder { color: #8c98b2; }
+.dark-theme [class*="mix-blend-multiply"] { mix-blend-mode: normal; }
+.dark-theme .theme-toggle { background-color: #1a2747 !important; border-color: #405072 !important; color: #ffd45a !important; }
+.dark-theme header { background-color: rgba(11, 18, 37, .94) !important; border-color: #263452 !important; }
+.dark-theme footer { background-color: #080e1e !important; }
+.dark-theme [class*="shadow-sm"], .dark-theme [class*="shadow-xl"] { box-shadow: 0 12px 30px rgba(0, 0, 0, .18); }
